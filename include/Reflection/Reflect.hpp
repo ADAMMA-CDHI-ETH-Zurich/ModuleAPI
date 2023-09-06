@@ -24,6 +24,14 @@
         code\
     }
 
+#define CustomReflectForReflectorNonNamespace(Class, Reflector, code)\
+    template<>\
+    void Class::reflect<Reflector>(Reflector& reflector)\
+    {\
+        typedef Class THIS_CLASS;\
+        code\
+    }
+
 #define SplitReflect()\
     template<typename Reflector>\
     void reflect(Reflector& reflector)\
