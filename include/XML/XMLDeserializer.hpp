@@ -310,12 +310,10 @@ namespace claid
                 
                 if(!this->isSequence)
                 {
-                    Logger::printfln("Is no sequence");
                     return this->currentXMLNode->findChild(property);
                 }
                 else
                 {
-                    Logger::printfln("Is sequence");
                     size_t ctr = 0;
                     for(std::shared_ptr<XMLNode> child : this->currentXMLNode->children)
                     {
