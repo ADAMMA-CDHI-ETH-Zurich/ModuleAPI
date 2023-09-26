@@ -1,13 +1,11 @@
-# CLosing the Loop on AI & Data Collection
+# Closing the Loop on AI & Data Collection
 
-<div style="display: flex;">
-  <div style="flex: 50%; padding: 10px;">
-    <img src="assets/eth_logo.png" alt="ETH Logo" width="100%">
-  </div>
-  <div style="flex: 50%; padding: 10px;">
-    <img src="assets/cdhi_logo.png" alt="CDHI Logo" width="100%">
-  </div>
-</div>
+<p align="center">
+  <img alt="Light" src="assets/eth_logo.png" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Dark" src="assets/cdhi_logo.png" width="45%">
+</p>
+
 
 This repository contains the implementation of the CLAID middleware layer.
 
