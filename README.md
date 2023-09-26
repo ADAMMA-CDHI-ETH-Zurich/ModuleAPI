@@ -1,4 +1,14 @@
-# CLAID API repository
+# CLosing the Loop on AI & Data Collection
+
+<div style="display: flex;">
+  <div style="flex: 50%; padding: 10px;">
+    <img src="assets/eth_logo.png" alt="ETH Logo" width="100%">
+  </div>
+  <div style="flex: 50%; padding: 10px;">
+    <img src="assets/cdhi_logo.png" alt="CDHI Logo" width="100%">
+  </div>
+</div>
+
 This repository contains the implementation of the CLAID middleware layer.
 
 ## Other functionalities of CLAID are implemented in the form of CLAID packages, which are available via separate repositories:
