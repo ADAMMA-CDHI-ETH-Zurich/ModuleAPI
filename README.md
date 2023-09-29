@@ -23,11 +23,3 @@ This repository contains the implementation of the CLAID middleware layer.
   - Polar Wearables: [Polar](https://gitfront.io/r/user-1539181/XGqAh7iKKaU3/PolarCollector/)
   - GreenTEG Core Body Temperature: [GreenTEGCollector](https://gitfront.io/r/user-1539181/FDWH4L9JBzat/GreenTegCORECollector/)
 
-## Contributors
-
-Patrick Langer, ETH Zurich, 2023
-Stephan Altmüller, ETH Zurich, 2023
-Francesco Feher, ETH Zurich, University of Parma, 2023
-
-## Contact
-
