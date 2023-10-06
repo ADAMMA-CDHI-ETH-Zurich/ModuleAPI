@@ -281,10 +281,14 @@ namespace claid
                 if(append)
                 {
                     file = std::ofstream(path, std::ios::app | std::ios::binary);
+                    CLAID_THROW(claid::Exception, "XMLSerializer failed to open file \"" << path << "\".\n"
+                        << "Check path and permissions.");
                 }
                 else
                 {
                     file = std::ofstream(path, std::ios::out | std::ios::binary);
+                    CLAID_THROW(claid::Exception, "XMLSerializer failed to open file \"" << path << "\".\n"
+                        << "Check path and permissions.");
                 }
 
                 std::string str;

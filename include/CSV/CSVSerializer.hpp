@@ -215,10 +215,17 @@ namespace claid
                 if(append)
                 {
                     file = std::ofstream(path, std::ios::app | std::ios::binary);
+                    if(!file.is_open())
+                    {
+                        CLAID_THROW(claid::Exception, "CSVSerializer failed to open file \"" << path << "\".\n"
+                        << "Check path and permissions.");
+                    }
                 }
                 else
                 {
                     file = std::ofstream(path, std::ios::out | std::ios::binary);
+                    CLAID_THROW(claid::Exception, "CSVSerializer failed to open file \"" << path << "\".\n"
+                        << "Check path and permissions.");
                 }
 
                 file << this->data.str() << "\n";
