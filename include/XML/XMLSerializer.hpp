@@ -275,22 +275,8 @@ namespace claid
                 // for XMLSerializer and -Deserialize.
             }
 
-            virtual void writeDataToFile(const std::string& path, bool append = true)
+            virtual void writeDataToFile(const std::string& path, std::ofstream& file)
             {
-                std::ofstream file;
-                if(append)
-                {
-                    file = std::ofstream(path, std::ios::app | std::ios::binary);
-                    CLAID_THROW(claid::Exception, "XMLSerializer failed to open file \"" << path << "\".\n"
-                        << "Check path and permissions.");
-                }
-                else
-                {
-                    file = std::ofstream(path, std::ios::out | std::ios::binary);
-                    CLAID_THROW(claid::Exception, "XMLSerializer failed to open file \"" << path << "\".\n"
-                        << "Check path and permissions.");
-                }
-
                 std::string str;
                 this->root->toString(str);
                 file << str;

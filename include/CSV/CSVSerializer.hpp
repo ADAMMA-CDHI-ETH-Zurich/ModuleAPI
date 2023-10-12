@@ -194,40 +194,15 @@ namespace claid
                 // Thus, this function allows to make sure the string "name" is explicitly stored.
             }
 
-             void writeHeaderToFile(const std::string& path, bool append = true)
+            void writeHeaderToFile(const std::string& path, std::ofstream& file)
             {
-                std::ofstream file;
-                if(append)
-                {
-                    file = std::ofstream(path, std::ios::app | std::ios::binary);
-                }
-                else
-                {
-                    file = std::ofstream(path, std::ios::out | std::ios::binary);
-                }
-
                 file << this->header.str() << "\n";
+                file.flush();
+
             }
 
-            void writeDataToFile(const std::string& path, bool append = true)
+            void writeDataToFile(const std::string& path, std::ofstream& file)
             {
-                std::ofstream file;
-                if(append)
-                {
-                    file = std::ofstream(path, std::ios::app | std::ios::binary);
-                    if(!file.is_open())
-                    {
-                        CLAID_THROW(claid::Exception, "CSVSerializer failed to open file \"" << path << "\".\n"
-                        << "Check path and permissions.");
-                    }
-                }
-                else
-                {
-                    file = std::ofstream(path, std::ios::out | std::ios::binary);
-                    CLAID_THROW(claid::Exception, "CSVSerializer failed to open file \"" << path << "\".\n"
-                        << "Check path and permissions.");
-                }
-
                 file << this->data.str() << "\n";
             }
 
